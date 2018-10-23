@@ -17,7 +17,7 @@ arcgis加载天地图相关应用
         |  Point | origin | 起始点 | 这里在异步加载的时候，点有时候不可用，不知道什么原因 |
         |  SpatialReference | spatialReference | 坐标系类型 | 
         |  int | tileHeight | 切片高 | 
-        | int | tileWidth | 切片低 |   
+        | int | tileWidth | 切片宽 |   
 
         #### WebTiledLayer参数  
 
