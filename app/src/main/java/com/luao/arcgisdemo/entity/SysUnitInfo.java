@@ -10,7 +10,7 @@ package com.luao.arcgisdemo.entity;
  * @author tangguo
  * @version 2017-12-21
  */
-public class SysUnitInfo {
+public class SysUnitInfo  {
 	
 	private String id;
 	private String name;		// 站点名称

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "554ed9f2c5294e9094beb2372c9db520",
+    "isNewRecord": false,
+    "name": "新材料园区泵站",
+    "lgtd": 106.679167,
+    "lttd": 38.105,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "ff43cfd0ac8642f9a7434fd67960f93a",
+    "isNewRecord": false,
+    "name": "金水源泵站",
+    "lgtd": 106.42614,
+    "lttd": 38.363681,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "4e58acf3511d423b849337d25d8a4461",
+    "isNewRecord": false,
+    "name": "A1点计量间",
+    "lgtd": 106.547778,
+    "lttd": 38.145556,
+    "isShow": "1",
+    "key1": "3"
+  },
+  {
+    "id": "c1a7d25324b145cdbf3635be0fb2ad96",
+    "isNewRecord": false,
+    "name": "A3点计量间",
+    "lgtd": 106.576111,
+    "lttd": 38.165833,
+    "isShow": "1",
+    "key1": "3"
+  },
+  {
+    "id": "2b3ad65178c844c8bdd72268217ce6e4",
+    "isNewRecord": false,
+    "name": "B点计量间",
+    "lgtd": 106.585278,
+    "lttd": 38.171389,
+    "isShow": "1",
+    "key1": "3"
+  },
+  {
+    "id": "ab64e8318ffa41998209b74cfe1acdad",
+    "isNewRecord": false,
+    "name": "环保产业园1#加压泵站",
+    "lgtd": 106.641389,
+    "lttd": 38.212222,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "d49a7dc82893473d9defece88db34608",
+    "isNewRecord": false,
+    "name": "环保产业园2#加压泵站",
+    "lgtd": 106.664444,
+    "lttd": 38.177778,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "12a9b504eb2741dda9f84d065efcea0c",
+    "isNewRecord": false,
+    "name": "临河计量间",
+    "lgtd": 106.551667,
+    "lttd": 38.218056,
+    "isShow": "1",
+    "key1": "3"
+  },
+  {
+    "id": "e2d82fb529794e73b7092a3c5c6b93d4",
+    "isNewRecord": false,
+    "name": "临河加压泵站",
+    "lgtd": 106.520833,
+    "lttd": 38.215556,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "621eb0f7f7f64e7e8535fdfc747aa2d3",
+    "isNewRecord": false,
+    "name": "C3点计量间",
+    "lgtd": 106.545556,
+    "lttd": 38.23,
+    "isShow": "1",
+    "key1": "3"
+  },
+  {
+    "id": "948d573a45a14aabb92796e81cfed117",
+    "isNewRecord": false,
+    "name": "宝利化工",
+    "lgtd": 106.685556,
+    "lttd": 38.088333,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "5d0eafcbc810413dbb3923a6171d2fa1",
+    "isNewRecord": false,
+    "name": "宁煤煤制油",
+    "lgtd": 106.613889,
+    "lttd": 38.199167,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "30a0cf6071114e68983ce25dbdab5069",
+    "isNewRecord": false,
+    "name": "和宁化学",
+    "lgtd": 106.586111,
+    "lttd": 38.188611,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "81fd11a0fd8046a6b2cd53b9c2be2de8",
+    "isNewRecord": false,
+    "name": "宁煤甲醇",
+    "lgtd": 106.588056,
+    "lttd": 38.175556,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "3d665c577ccc4ef591757acf7b13bfb8",
+    "isNewRecord": false,
+    "name": "京能电厂",
+    "lgtd": 106.546944,
+    "lttd": 38.225833,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "e5abc0dea40a413b86227d2c2e7a9db7",
+    "isNewRecord": false,
+    "name": "青铝",
+    "lgtd": 106.535556,
+    "lttd": 38.217222,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "e80dacd8089d4d2abad6a2aa70e812ea",
+    "isNewRecord": false,
+    "name": "马莲台电厂",
+    "lgtd": 106.563889,
+    "lttd": 38.170556,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "5b1f2d13b75f4de99bff826c072ec496",
+    "isNewRecord": false,
+    "name": "中电投",
+    "lgtd": 106.537222,
+    "lttd": 38.143333,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "1c26dba7e09341d5b7e6f3e94ead8c0d",
+    "isNewRecord": false,
+    "name": "灵州电厂",
+    "lgtd": 106.558333,
+    "lttd": 38.154722,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "bbd69b521d0940e1a6a88b0da5c8164c",
+    "isNewRecord": false,
+    "name": "宝塔石化",
+    "lgtd": 106.548333,
+    "lttd": 38.146389,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "0d1c5949603345ca88822fc007402e55",
+    "isNewRecord": false,
+    "name": "中科环保",
+    "lgtd": 106.489722,
+    "lttd": 38.246667,
+    "isShow": "1",
+    "key1": "2"
+  },
+  {
+    "id": "f8868b1bd0f249709b73a841c5aae16f",
+    "isNewRecord": false,
+    "name": "鸭子荡水库",
+    "lgtd": 106.534993,
+    "lttd": 38.150485,
+    "isShow": "1",
+    "esstym": "201707",
+    "adag": "宁东水务局",
+    "sort": 2,
+    "addr": "宁夏宁东红山石",
+    "key1": "4"
+  },
+  {
+    "id": "2bd56559ba3e461ea215c854cd12a5fc",
+    "isNewRecord": false,
+    "name": "宁东一水厂",
+    "lgtd": 106.524848,
+    "lttd": 38.137129,
+    "isShow": "1",
+    "esstym": "201709",
+    "adag": "宁东水务局",
+    "sort": 3,
+    "addr": "宁夏宁东红山石",
+    "key1": "5"
+  },
+  {
+    "id": "8f6ced11219f4d0ca2d925644c82ea47",
+    "isNewRecord": false,
+    "name": "古窑泵站",
+    "lgtd": 106.607222,
+    "lttd": 38.125,
+    "isShow": "1",
+    "esstym": "201705",
+    "adag": "宁东水务局",
+    "addr": "宁夏宁东红山石",
+    "key1": "1"
+  },
+  {
+    "id": "6338969a44b04bf2a94828c26f15adc2",
+    "isNewRecord": false,
+    "name": "宁东二水厂",
+    "lgtd": 106.547778,
+    "lttd": 38.165833,
+    "isShow": "1",
+    "esstym": "201706",
+    "adag": "宁东水务局",
+    "addr": "宁夏宁东红山石",
+    "key1": "5"
+  },
+  {
+    "id": "3276da83cf134a1a9a0cd57b87188ba4",
+    "isNewRecord": false,
+    "name": "绿化泵站",
+    "lgtd": 106.53478,
+    "lttd": 38.14816,
+    "isShow": "1",
+    "key1": "1"
+  },
+  {
+    "id": "c8d5126874ea4e24ab22f4bd90095b8d",
+    "isNewRecord": false,
+    "name": "红山石泵站",
+    "lgtd": 106.466712,
+    "lttd": 38.335179,
+    "isShow": "1",
+    "esstym": "201708",
+    "adag": "宁东水务局",
+    "sort": 1,
+    "addr": "宁夏宁东红山石",
+    "key1": "1"
+  },
+  {
+    "id": "2464d78163b1455385f8fab58cc81327",
+    "isNewRecord": false,
+    "name": "B点绿化加压泵站",
+    "lgtd": 106.585278,
+    "lttd": 38.171389,
+    "isShow": "1",
+    "key1": "1"
+  }
+]

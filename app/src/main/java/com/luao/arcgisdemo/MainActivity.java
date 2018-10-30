@@ -1,10 +1,13 @@
 package com.luao.arcgisdemo;
 
+import android.app.admin.SystemUpdateInfo;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,13 +23,20 @@ import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.view.Graphic;
 import com.esri.arcgisruntime.mapping.view.GraphicsOverlay;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.esri.arcgisruntime.symbology.PictureMarkerSymbol;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.luao.arcgisdemo.entity.SysUnitInfo;
 import com.luao.arcgisdemo.gisutils.ArcGisUtil;
 import com.luao.arcgisdemo.gisutils.SecondActivity;
 import com.luao.arcgisdemo.gisutils.TianDiMapUtils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     private MapView mMapView;
@@ -106,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
         imageBaseMap = TianDiMapUtils.getTianDiMap(TianDiMapUtils.MapType.URL_CN_IMAGEBASEMAP);
         imageBaseMapAnno = TianDiMapUtils.getTianDiMap(TianDiMapUtils.MapType.URL_CN_IMAGEBASEMAP_ANNOTATION);
-        ;
 
         terrainBaseMap = TianDiMapUtils.getTianDiMap(TianDiMapUtils.MapType.URL_CN_TERRAINBASEMAP);
         terrainBaseMapAnno = TianDiMapUtils.getTianDiMap(TianDiMapUtils.MapType.URL_CN_TERRAINBASEMAP_ANNOTATION);
@@ -185,46 +194,66 @@ public class MainActivity extends AppCompatActivity {
         loadUnitMarkerData();
     }
 
+
+    public static String getOriginalFundData(Context context) {
+        InputStream input = null;
+        try {
+            input = context.getAssets().open("unit.json");
+            String json = convertStreamToString(input);
+            return json;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static String convertStreamToString(java.io.InputStream is) {
+        String s = null;
+        try {
+            Scanner scanner = new Scanner(is, "UTF-8").useDelimiter("\\A");
+            if (scanner.hasNext()) {
+                s = scanner.next();
+            }
+            is.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
+    }
+
+
     /**
      * 加载地图marker元素数据
      */
     private void loadUnitMarkerData() {
-//        ApiManager.getInstance().loadGisData()
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new ApiObserver<List<SysUnitInfo>>() {
-//                    @Override
-//                    public void onSuccess(List<SysUnitInfo> sysUnitInfoList) {
-//                        sysUnitInfos = sysUnitInfoList;
-//                        //添加点
-//                        graphicsOverlayPump = arcGisUtil.addGraphicsOverlay();
-//                        graphicsOverlayWaterStation = arcGisUtil.addGraphicsOverlay();
-//                        PictureMarkerSymbol iconPump = new PictureMarkerSymbol(new BitmapDrawable(changeSize(R.drawable.gis_ic_bengzhan)));
-//                        PictureMarkerSymbol iconWaterStation = new PictureMarkerSymbol(new BitmapDrawable(changeSize(R.drawable.gis_ic_shuichang)));
-//
-//                        graphicListPump = new ArrayList<>();
-//                        graphicListWaterStation = new ArrayList<>();
-//
-//                        for (SysUnitInfo sysUnitInfo : sysUnitInfoList) {
-//                            Point point = new Point(sysUnitInfo.getLgtd(), sysUnitInfo.getLttd(), wgs84);
-//                            HashMap<String, Object> stringStringHashMap = new HashMap<>();
-//                            stringStringHashMap.put("name", sysUnitInfo.getName());
-//                            if (sysUnitInfo.getKey1().equals("1")) {
-//                                graphicListPump.add(new Graphic(point, stringStringHashMap, iconPump));
-//                            } else if (sysUnitInfo.getKey1().equals("5")) {
-//                                graphicListWaterStation.add(new Graphic(point, stringStringHashMap, iconWaterStation));
-//                            }
-//                        }
-//                        graphicsOverlayPump.getGraphics().addAll(graphicListPump);
-//                        graphicsOverlayWaterStation.getGraphics().addAll(graphicListWaterStation);
-//                    }
-//
-//                    @Override
-//                    public void onFailure() {
-//
-//                    }
-//                });
+        String unitDataJson = getOriginalFundData(this);
+        List<SysUnitInfo> sysUnitInfoList = new Gson().fromJson(unitDataJson, new TypeToken<List<SysUnitInfo>>() {
+        }.getType());
+
+        //添加点
+        graphicsOverlayPump = arcGisUtil.addGraphicsOverlay();
+        graphicsOverlayWaterStation = arcGisUtil.addGraphicsOverlay();
+        PictureMarkerSymbol iconPump = new PictureMarkerSymbol(new BitmapDrawable(changeSize(R.drawable.gis_ic_bengzhan)));
+        PictureMarkerSymbol iconWaterStation = new PictureMarkerSymbol(new BitmapDrawable(changeSize(R.drawable.gis_ic_shuichang)));
+
+        graphicListPump = new ArrayList<>();
+        graphicListWaterStation = new ArrayList<>();
+
+        for (SysUnitInfo sysUnitInfo : sysUnitInfoList) {
+            Point point = new Point(sysUnitInfo.getLgtd(), sysUnitInfo.getLttd(), wgs84);
+            HashMap<String, Object> stringStringHashMap = new HashMap<>();
+            stringStringHashMap.put("name", sysUnitInfo.getName());
+            if (sysUnitInfo.getKey1().equals("1")) {
+                graphicListPump.add(new Graphic(point, stringStringHashMap, iconPump));
+            } else if (sysUnitInfo.getKey1().equals("5")) {
+                graphicListWaterStation.add(new Graphic(point, stringStringHashMap, iconWaterStation));
+            }
+        }
+        graphicsOverlayPump.getGraphics().addAll(graphicListPump);
+        graphicsOverlayWaterStation.getGraphics().addAll(graphicListWaterStation);
+
     }
+
     /**
      * 移动地图中心
      *

@@ -27,6 +27,15 @@ arcgis加载天地图相关应用
         |  Iterable<String> | subDomains | 不知道术语，见备注 | 天地图WMTS服务有八个域名可以用来访问，0~8中任何一个都可以进行切片
         |  TileInfo | tileInfo | 关键信息 | 见上文 |
         |  Envelope | fullExtent | 地图范围 | 
+
+       #### Graphic
+        | 参数类型 | 参数名 | 解释 | 备注 |
+        | ------ | ------ | ------ |------ |
+        | Geometry | geometry | 地图信息 |一般用Point即可 
+        |  Map<String, Object> | attributes | 额外信息 | 直接放对象会报错，不知道原因
+        |  Symbol | symbol | marker图片 |  PictureMarkerSymbol iconPump = new PictureMarkerSymbol(new BitmapDrawable(changeSize(R.drawable.gis_ic_bengzhan))); |
+
+        new Graphic(point, stringStringHashMap, iconWaterStation)
     1. ### ArcGisUtil  
         - 使用 Lifecycle 解决生命周期问题，把生命周期的控制抽出到工具类中  
         - arcgis中没有像百度、高德中那种marker点击事件，所以需要根据点击坐标自己实现  
