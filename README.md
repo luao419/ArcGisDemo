@@ -1,9 +1,15 @@
 # ArcGisDemo
 arcgis加载天地图相关应用
-### 当初开发的时候在网上搜索了很久，没有看到合适的arcgis相关的资料，很多资料都是之前旧版本的arcgis，大部分的代码也不能用，所以工作完成之后在这里稍微总结一下
+### 当初开发的时候在网上搜索了很久，没有看到合适的arcgis相关的资料，很多资料都是之前旧版本的arcgis，大部分的代码也不能用，所以工作完成之后在这里稍微总结一下  
+
+    2019-4-22日更新  
+    天地图服务需要注册key，不然无法成功调用地图，注册地址  https://console.tianditu.gov.cn/api/key  
+    调用方法，原地址后加上 &tk={{申请的key}}  
+      ***
  1. ## 天地图相关
     [天地图官网](http://www.tianditu.gov.cn)  
     [代码所用的服务地址](http://service.tianditu.gov.cn/)
+  
 
 1. ## arcigs相关
     1. ### TianDiMapUtils  

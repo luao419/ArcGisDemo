@@ -74,34 +74,40 @@ public class TianDiMapUtils {
     private static final List<String> SubDomain = Arrays.asList("t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7");
 
     /**
+     * 天地图key，注册地址  https://console.tianditu.gov.cn/api/key
+     */
+    private static String TIANDI_MAP_KEY = "94aa433732f999e8f30b6a7b0141cbfd";
+
+
+    /**
      * 中文矢量图
      */
-    private static String URL_CN_VECTORBASEMAP = "https://{subDomain}.tianditu.cn/DataServer?T=vec_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_VECTORBASEMAP = "https://{subDomain}.tianditu.gov.cn/DataServer?T=vec_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      * 中文矢量图标注
      */
-    private static String URL_CN_VECTORBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.cn/DataServer?T=cva_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_VECTORBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.gov.cn/DataServer?T=cva_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      * 中文地形图
      */
-    private static String URL_CN_TERRAINBASEMAP = "http://{subDomain}.tianditu.cn/DataServer?T=ter_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_TERRAINBASEMAP = "http://{subDomain}.tianditu.gov.cn/DataServer?T=ter_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      * 中文地形图标注
      */
-    private static String URL_CN_TERRAINBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.cn/DataServer?T=cta_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_TERRAINBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.gov.cn/DataServer?T=cta_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      * 中文影像图
      */
-    private static String URL_CN_IMAGEBASEMAP = "http://{subDomain}.tianditu.cn/DataServer?T=img_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_IMAGEBASEMAP = "http://{subDomain}.tianditu.gov.cn/DataServer?T=img_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      * 中文影像图标注
      */
-    private static String URL_CN_IMAGEBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.cn/DataServer?T=cia_w&X={col}&Y={row}&L={level}";
+    private static String URL_CN_IMAGEBASEMAP_ANNOTATION = "http://{subDomain}.tianditu.gov.cn/DataServer?T=cia_w&X={col}&Y={row}&L={level}&tk="+TIANDI_MAP_KEY;
 
     /**
      *
